@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>AlgoViz | Interactive DSA Visualizer</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="navbar">
+<a class="logo" href="#home"><span class="logo-icon">&lt;/&gt;</span>ALGOVIZ</a>
+<nav>
+<a href="#home" data-nav="home">Home</a><a href="#visualizer" data-nav="visualizer">Visualizer</a><a href="#algorithms" data-nav="algorithms">Algorithms</a><a href="#how" data-nav="how">How It Works</a><a href="#about" data-nav="about">About</a>
+</nav>
+<div class="nav-actions"><a class="btn" href="https://github.com/anushka5545" target="_blank">GitHub</a><button class="theme" id="theme">☼</button><a class="btn green" href="#visualizer">Get Started →</a></div>
+</header>
+
+<main>
+<section id="home" class="hero">
+<div><span class="eyebrow">INTERACTIVE DSA LEARNING</span><h1>Algorithms Should Be <span>Seen,</span><br><span>Not Memorized.</span></h1><p>AlgoViz is an interactive platform that helps students understand Data Structures and Algorithms by seeing every operation happen visually.</p><div class="hero-buttons"><a class="btn green" href="#visualizer">Start Visualizing →</a><a class="btn" href="#algorithms">Explore Algorithms</a></div></div>
+<div class="terminal"><div class="term-top"><i></i><i></i><i></i> algoviz.js</div><div class="code"><span class="g">const</span> stack = [];<br><br>stack.<b>push</b>(10);<br>stack.<b>push</b>(20);<br>stack.<b>push</b>(30);<br><br><span class="g">✓ Visualized successfully</span></div><div class="stack-demo"><div>10</div><div>20</div><div>30</div><small>TOP</small></div></div>
+</section>
+<div class="stats"><div><b>05</b><span>Data Structures</span></div><div><b>07</b><span>Algorithms</span></div><div><b>100%</b><span>Interactive</span></div><div><b>O(1)–O(n²)</b><span>Complexity Analysis</span></div></div>
+<section class="section"><span class="eyebrow">EXPLORE THE SYSTEM</span><h2>Everything You Need to Master DSA</h2><div class="feature-grid"><a class="feature" href="#visualizer"><span class="feature-icon">▣</span><h3>Data Structure Visualizer</h3><p>Work with real values and perform Push, Pop, Enqueue, Delete, Insert, BFS and more.</p></a><a class="feature" href="#algorithms"><span class="feature-icon">⌁</span><h3>Algorithm Lab</h3><p>Run sorting and searching algorithms with animations, steps and pseudocode.</p></a><a class="feature" href="#how"><span class="feature-icon">?</span><h3>Learn Step-by-Step</h3><p>Understand what happens internally during every operation and decision.</p></a></div></section>
+
+<section id="visualizer" class="page-head"><span class="eyebrow">INTERACTIVE VISUALIZER</span><h1>See Your Data <span>Come Alive.</span></h1><p>Enter your values. Perform operations. Watch the structure change in real time.</p>
+<div class="tabs" id="tabs"><button class="selected" data-type="stack">Stack</button><button data-type="queue">Queue</button><button data-type="linkedlist">Linked List</button><button data-type="tree">Binary Tree</button><button data-type="graph">Graph</button></div>
+<div class="workspace"><section class="panel"><div class="panel-title"><div><span class="eyebrow" id="typeLabel">STACK</span><h2 id="structureTitle">Stack Visualizer</h2></div><button class="btn danger" id="clear">Clear</button></div><div class="input-row"><input id="v1" placeholder="Enter value"><input id="v2" class="hidden" placeholder="Second vertex"><button class="btn green" id="mainAction">Push</button><button class="btn" id="removeAction">Pop</button></div><div id="visual" class="visual-stage"></div><div class="operation-row"><button class="btn" id="search">Search</button><button class="btn" id="reverse">Reverse</button><button class="btn" id="traverse">Traverse</button><label>Speed <input id="speed" type="range" min="100" max="1000" value="450"></label></div></section>
+<aside><div class="panel"><h3>Operation Log</h3><div id="log" class="log"></div></div><br><div class="panel"><h3>Complexity</h3><div id="complexity" class="complexity"></div></div><br><div class="panel"><h3>How It Works</h3><p id="desc" class="muted"></p></div></aside></div></section>
+
+<section id="algorithms" class="page-head"><span class="eyebrow">ALGORITHM LAB</span><h1>Algorithms You Can <span>See.</span></h1><p>Choose an algorithm, enter values, and follow each comparison, swap and decision.</p>
+<div class="algorithm-layout"><aside class="algo-menu panel"><h3>Sorting</h3><button data-algo="bubble">Bubble Sort</button><button data-algo="selection">Selection Sort</button><button data-algo="insertion">Insertion Sort</button><h3>Searching</h3><button data-algo="linear">Linear Search</button><button data-algo="binary">Binary Search</button><h3>Traversal</h3><button data-algo="bfs">BFS</button><button data-algo="dfs">DFS</button></aside>
+<section><div class="panel"><div class="input-row"><input id="algoInput" value="8,3,5,1,9,2"><input id="target" value="5" placeholder="Target for search"><button class="btn green" id="runAlgo">Run Algorithm ▶</button></div><div class="algorithm-heading"><div><span class="eyebrow" id="algoTag">SELECT AN ALGORITHM</span><h2 id="algoTitle">Choose an algorithm</h2></div><div id="algoComplexity" class="complexity"></div></div><div id="arrayVisual" class="array-stage"><span class="muted">Your values will appear here.</span></div></div><div class="two-panels"><div class="panel"><h3>Step-by-Step Execution</h3><div id="steps" class="log"></div></div><div class="panel"><h3>Pseudocode</h3><pre id="pseudo" class="codebox">Choose an algorithm to view pseudocode.</pre></div></div></section></div></section>
+
+<section id="how" class="section"><span class="eyebrow">HOW IT WORKS</span><h2>Learn DSA Through Visualization</h2><div class="info-grid"><div class="feature"><h3>1. Enter Data</h3><p>Provide your own values instead of relying on fixed examples.</p></div><div class="feature"><h3>2. Perform Operations</h3><p>Push, pop, search, insert, delete, traverse and create graph edges.</p></div><div class="feature"><h3>3. Watch the Change</h3><p>The visual representation updates immediately so you can understand the logic.</p></div><div class="feature"><h3>4. Study Complexity</h3><p>See time and space complexity for each operation and algorithm.</p></div><div class="feature"><h3>5. Follow Steps</h3><p>Sorting and searching show comparisons, swaps and decisions step by step.</p></div><div class="feature"><h3>6. Practice</h3><p>Clear the structure and try different inputs to strengthen your understanding.</p></div></div></section>
+
+<section id="about" class="section"><span class="eyebrow">ABOUT ALGOVIZ</span><h2>Interactive DSA Learning Platform</h2><div class="panel"><p class="muted">AlgoViz is designed as a student-friendly project for learning Data Structures and Algorithms through interactive visualizations. It combines real user input, operations, animations, pseudocode and complexity analysis in one simple interface.</p><h3>Developer</h3><p><b>Anushka Santosh Powar</b></p><p class="muted">GitHub: <a style="color:var(--green)" href="https://github.com/anushka5545" target="_blank">anushka5545</a></p><h3>Technology</h3><p class="muted">HTML5 • CSS3 • Vanilla JavaScript • DOM Visualization • GitHub Pages</p></div></section>
+</main>
+<footer class="footer">AlgoViz • Interactive Data Structures & Algorithms • Developed by Anushka Santosh Powar</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
